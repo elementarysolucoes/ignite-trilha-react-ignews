@@ -58,7 +58,7 @@ export const getStaticProps: GetStaticProps = async () => {
     amount: new Intl.NumberFormat('en-US', {
       style: 'currency',
       currency: 'USD'
-    }).format(price.unit_amount / 100)
+    }).format(Number(price.unit_amount) / 100)
   };
 
   return { 
@@ -81,7 +81,7 @@ export const getStaticProps: GetStaticProps = async () => {
 //     amount: new Intl.NumberFormat('en-US', {
 //       style: 'currency',
 //       currency: 'USD'
-//     }).format(price.unit_amount / 100)
+//     }).format(Number(price.unit_amount) / 100)
 //   };
 
 //   return { 
